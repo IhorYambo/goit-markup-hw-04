@@ -88,11 +88,27 @@ img {
     font-weight: 500;
     text-decoration: none;
     padding: 24px 0;
-    color: #2E2F42;    
+    color: #2E2F42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .page-nav .list-nav .link:hover,
 .page-nav .list-nav .link:focus {
     color: #404BBF;
+}
+.page-nav .list-nav .list {
+    position: relative;
+}
+.active-link::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background-color: #404BBF;
+
 }
 .page-address {
     font-style: normal;
@@ -101,6 +117,7 @@ img {
 .page-address .link {
     text-decoration: none;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .page-address .link:hover,
 .page-address .link:focus {
@@ -161,6 +178,7 @@ img {
     border-radius: 4px;
     display: block;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color;
 }
 .sec-solutions .button:hover,
 .sec-solutions .button:focus {
@@ -276,14 +294,17 @@ margin-bottom: 8px;
     display: flex;
     justify-content: space-around;
 }
-.instagram,
-.twetter,
-.facebook,
-.linkedin {
+.icon {
+    display: inline-block;
     width: 40px;
     height: 40px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    fill: #4D5AE5;
 }
-
+.icon:hover {
+    fill:#404BBF;
+    --color2:#F4F4FD;
+}
 /* #endregion our team */
 /* #region Portfolio */
 .sec-portfolio {
@@ -314,6 +335,8 @@ margin-bottom: 8px;
     height: 100%;
     background-color: #4D5AE5;
     transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .text-ovrlay {
@@ -337,6 +360,10 @@ margin-bottom: 8px;
 
     padding: 100px 0;
 }
+.sec-footer .container {
+    display: flex;
+    gap: 120px;
+}
 .logo-foot {
     font-weight: 700;
     color: #F4F4FD;
@@ -347,8 +374,23 @@ margin-bottom: 8px;
 }
 .sec-footer .text-list {
     color: #F4F4FD;
-
-    padding-right:866px;
+    max-width: 264px;
+    
+    
 }
+.text-icon {
+    font-weight: 500;
+    font-size: 16px; 
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
 
+    margin-bottom: 16px;
+}
+.con-icon .listing-mesengers {
+    gap: 16px;
+}
+.con-icon .listing-mesengers .icon:hover {
+    fill: #31D0AA;
+}
 /* #endregion footer */
