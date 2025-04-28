@@ -49,6 +49,10 @@ img {
 /* #region header */
 .header {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 
+    0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .logo {
     font-family: "Raleway", sans-serif;
@@ -145,6 +149,7 @@ img {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
+    background-size: cover;
     
 }
 .sec-solutions .page-title {
@@ -178,7 +183,7 @@ img {
     border-radius: 4px;
     display: block;
     border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-solutions .button:hover,
 .sec-solutions .button:focus {
@@ -199,12 +204,12 @@ img {
 .con-adventages {
     background-color: #F4F4FD;
     border: 1px solid #8E8F99;
-border-radius: 4px;
-width: 264px;
-height: 112px;
-margin-bottom: 8px;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    margin-bottom: 8px;
 }
-.con-adventages .antenna {
+/* .con-adventages .antenna {
     display: inline-block;
     width: 64px;
     height: 64px;
@@ -221,11 +226,11 @@ margin-bottom: 8px;
     width: 64px;
     height: 64px;
     margin: 24px 100px;
-}
-.con-adventages .astronaut {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
+} */
+.con-adventages .icon-adventages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 24px 100px;
 }
 .club-list .title {
@@ -292,18 +297,34 @@ margin-bottom: 8px;
 }
 .listing-mesengers {
     display: flex;
-    justify-content: space-around;
+    gap: 24px;
+    justify-content: center;
+}
+.list-mesengers {
+    width: 40px;
+    height: 40px;
+}
+.list-mesengers .link {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .icon {
     display: inline-block;
     width: 40px;
     height: 40px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    fill: #4D5AE5;
+    fill:#4D5AE5;
+
 }
-.icon:hover {
+.icon:hover,
+.icon:focus {
     fill:#404BBF;
-    --color2:#F4F4FD;
+    --color2:#f4f4fd;
 }
 /* #endregion our team */
 /* #region Portfolio */
@@ -349,6 +370,7 @@ margin-bottom: 8px;
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-portfolio .club-list .page-list:hover .ovrlay {
     transform: translateY(0)
