@@ -88,6 +88,7 @@ img {
     color: #2E2F42;
 }
 .page-nav .list-nav .link {
+    position: relative;
     display: block;
     font-weight: 500;
     text-decoration: none;
@@ -99,17 +100,16 @@ img {
 .page-nav .list-nav .link:focus {
     color: #404BBF;
 }
-.page-nav .list-nav .list {
+/* .page-nav .list-nav .list {
     position: relative;
-}
-.active-link::after {
+} */
+.page-nav .list-nav .active-link::after {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     content: "";
-    display: inline-block;
     border-radius: 2px;
-    width: 48px;
+    width: 100%;
     height: 4px;
     background-color: #404BBF;
 
