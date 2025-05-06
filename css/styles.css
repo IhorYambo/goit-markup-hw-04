@@ -294,6 +294,7 @@ img {
 }
 .icon-link:hover,
 .icon-link:focus {
+    background-color: #404bbf;
     fill: #404BBF;
 }
 .icon {
